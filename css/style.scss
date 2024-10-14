@@ -21,16 +21,18 @@
     font-style: normal;
 }
 
-* {
-    margin: 0px;
-    font-family: 'TTSFirsNeue';
-    font-size: 14px;
-    padding: 0px;
-}
 
 html {
     font-size: 10px;
 }
+
+* {
+    margin: 0px;
+    font-family: 'TTSFirsNeue';
+    font-size: 1.4rem;
+    padding: 0px;
+}
+
 
 h1, h2, h3 {
     font-weight: 500;
@@ -51,8 +53,16 @@ body {
     background-size: 100% 75rem;
 }
 
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
 .mb-6 {
     margin-bottom: 6rem;
+}
+
+.pt-3 {
+    padding-top: 3rem;
 }
 
 .btn, .nav-item {
@@ -65,62 +75,29 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    gap: 10px;
 }
 
-.tm-header {
+.underline {
+
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.div-tm-width {
+.tm-width {
+    max-width: 1400px;
+    padding: 0 5rem;
     min-width: 320px;
     margin: 0 auto;
-
-    @media (min-width: 992px) {
-        max-width: 1240px;
-    }
 }
 
-.tm-header-container {
+
+
+.tm-header-cntr-1 {
     align-items: center;
     box-sizing: border-box;
-    justify-content: space-between;
     display: flex;
     color: white;
-}
 
-
-.tm-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.6rem 0;
-}
-
-
-
-.tm-menu-container {
-    display: flex;
-    height: 100%;
-    box-sizing: border-box;
-
-    .nav-list {
-        display: flex;
-        justify-content: center;
-        box-sizing: border-box;
-        
-        .nav-item {
-            margin-right: 2.4rem;
-            box-sizing: border-box;
-        }
-    }
-}
-
-.div-logo-tab {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-
+    
     .logo {
         height: 4rem;
 
@@ -130,9 +107,35 @@ body {
             object-fit: cover;
         }
     }
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        gap: 4rem;
+    
+        .cips {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            max-height: 32px;
+        }
+    }
+
+    .auth {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .tab {
+    margin-left: 2rem;
     display: flex;
     gap: 2rem;
     
@@ -143,6 +146,7 @@ body {
             position: relative;
             font-weight: 500;
             color: rgba(255,255,255, 1);
+            
             &::before {
                 content: "___";
                 position:absolute;
@@ -150,30 +154,24 @@ body {
                 left: 50%;
             }
         }
+
     }
+
     label {
         padding: 2.7rem 0;
         line-height: 2rem;
         color: rgba(255,255,255, 0.8);
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .br {
-        padding: 2.7rem 0;
-        color: rgba(255,255,255,0.2);
-    }
-}
-
-.profile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4rem;
-
-    .cips {
-        display: flex;
-        align-items: center;
-        gap: 1.6rem;
-        max-height: 32px;
+        background-color:rgba(255,255,255,0.2);
+        width: 1px;
+        height: 1.2rem;
+        align-self: center;
     }
 }
 
@@ -193,7 +191,7 @@ body {
 
     .logo-white, .logo-telegram {
         width: 2rem;
-        height: 2.4rem;
+        height: 2rem;
         text-align: center;
 
         img {
@@ -209,15 +207,34 @@ body {
     }
 }
 
-.auth {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
 
-    &:hover {
-        cursor: pointer;
+
+
+.tm-menu {
+    display: flex;
+    margin: 1.6rem 0;
+
+    .image-search {
+        margin-left: auto;
+        width: 16px;
+        height: 16px;
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .tm-menu-container {
+        display: flex;
+        align-items: center;
+    
+            
+        .nav-item {
+            margin-right: 2.4rem;
+            box-sizing: border-box;
+        }
     }
 }
+
 
 
 
@@ -228,28 +245,34 @@ body {
     background-color: white;
     border-radius: 6rem 6rem 0 0;
     padding: 6rem;
+    flex: 1;
     
     .cluster1-bg-img {
         position: absolute;
         left: -3.5rem;
-        bottom: -2.8rem;
+        top: 2.8rem;
         img {
             object-fit: cover;
         }
     }
 } 
 
-.div-block-info {
+.info-block {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-
-    .div-block-title {
+    max-width: 600px;
+    gap: 4rem;
+    
+    &-text {
         h1 {
             font-size: 6.4rem;
             margin-bottom: 1.6rem;
-        }        
+        }      
+        
+        .text {
+            font-size: 1.6rem;
+        }
     }
 
     .div-block-btn {
@@ -263,6 +286,9 @@ body {
             border-radius: 12px;
             color: rgba(19, 139, 225, 1);
 
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -277,7 +303,7 @@ body {
     gap: 4rem;
 }
 
-.div-card-cluster {
+.cluster-card {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -289,7 +315,8 @@ body {
     background: url("../images/Vector_block.png");
     background-size: cover;
    
-    .div-text {
+    &-text {
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
@@ -301,13 +328,13 @@ body {
             h2 {
                 font-size: 3.2rem;
             }
-            p {
+            .text {
                 font-size: 1.6rem;
             }
         }
     }
 
-    .illustration {
+    &-illustration {
         max-width: 300px;
         max-height: 270px;
         margin: 0 auto;
@@ -319,27 +346,33 @@ body {
     }
 }
 
-.div-tm-about {
+.tm-about {
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
+    padding: 2.4rem 0;
 
-    .div-tm-about-frame {
-        min-width: calc(50% - 4rem);
+    &-frame {
         display: flex;
         flex-direction: column;
-        gap: 2.4rem;
+        min-width: calc(50% - 8rem);
         border-bottom: 1px solid rgba(28, 29, 47,0.12);
+        flex: 1;
 
         .about-text {
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
-            h2 {
+            margin-bottom: 3.2rem;
+            flex: 1;
+
+            &-high {
                 font-size: 2.4rem;
+                font-weight: 500;
             }
-            .about-text-low {
+            &-low {
                 font-size: 1.6rem;
+                color: rgba(28, 29, 34, 0.36)
             }
         }
     }
@@ -349,6 +382,7 @@ body {
         width: 24px;
         border: 1rem solid rgba(0, 153, 255, 0.18);
         border-radius: 1rem;
+        margin-bottom: 2.4rem;
         
         img {
             background-color: rgba(0, 153, 255, 0.18);
@@ -388,21 +422,29 @@ body {
 .card-cluster {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    border-radius: 1.5rem;
-    padding: 1.2rem 0.8rem;
+    border-radius: 2rem;
+    padding: 1.2rem 0.8rem 2.4rem;
+    align-items: center;
+    flex: 1 1;
     box-shadow:
         0px -4px 8px 0px rgba(68, 83, 113, 0.05),
         0px 0px 16px 0px rgba(68, 83, 113, 0.1);
     
     .illustration {
-        border-radius: 1rem;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 2rem;
         background-color: rgb(248,248,248);
-        margin: 0 auto;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        width: 100%;
+        min-height: 200px;
+        margin-bottom: 2rem;
+
+        .img-cont {
+            max-width: fit-content;
+            margin: 0 auto;
+            img {
+                object-fit: cover;
+            }
         }
     }
 }
@@ -412,24 +454,48 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    padding: 0 2rem;
 
     .info-text {
-        padding: 0 2rem;
         font-size: 1.8rem;
         font-weight: 500;
     }
 
     .info-project-ppl {
         display: flex;
+        gap: 4rem;
     
+        .slash {
+            background-color:rgba(28,29,34, 12%);
+            width: 1px;
+            height: 100%;
+            align-self: center;    
+        }
+
         .info-project {
             h2 {
                 font-size: 2.4rem;
-                color: rbg(19, 139, 225);
+                color: rgb(19, 139, 225);
             }
+
+
             .ppl-text {
                 font-size: 1.6rem;
             }
         }
     }
+}
+
+.cluster-btn {
+    align-self: center;
+    border-radius: 1.2rem;
+    padding: 1.2rem 2.4rem;
+    background: 
+        linear-gradient(to right,
+         rgb(55, 203, 250),
+          rgb(34, 157, 245));
+
+    &:hover {
+        cursor: pointer;
+    }  
 }
