@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Московский инновационный кластер</title>
-    <link rel="stylesheet" href="./css/switchstyle.css"/>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="tm-header">
+    <header class="tm-header">
+        <div class="underline">
             <div class="tm-width">
                 <div class="tm-header-cont-1">
-
+    
                     <div class="logo">
                         <img src="./images/logo.svg" alt="logo" />
                     </div>
@@ -24,14 +23,12 @@
                         <input id="tab-btn-2" name="tab-btn" type="radio" value="individual"/>
                         <label for="tab-btn-2">Физическим лицам</label>
                     </div>
-
+    
                     <div class="profile">
                         <div class="cips">
-                            <div class="chips-btn">
-                                <a href="#" class="btn">Кластер «Ломоносов»</a>
-                            </div>
+                            <a href="#" class="btn">Кластер «Ломоносов»</a>
                         
-                            <div class="chips-btn">
+                            <a class="chips-btn btn" href="">
                                 <div class="logo-white">
                                     <img src="./images/logo_white.svg" alt="logo">
                                 </div>
@@ -41,42 +38,42 @@
                                 <div class="logo-telegram">
                                     <img src="./images/telegram_regular.svg" alt="telegram">
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     
-                        <div class="auth">
-                            <a class="btn">Авторизация</a>
+                        <a class="auth btn" href="">
+                            <div>Авторизация</div>
                             <div class="auth-img">
                                 <img src="./images/user.svg" alt="authorization">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="underline"></div>
-
-            <div class="tm-width">
-                <div class="tm-menu mb-1">
-                    <div class="tm-menu-container">
-                        <nav class="nav-list">
-                            <a class="nav-item" href="#">Инвестиции </a>
-                            <a class="nav-item" href="#">Спрос и кооперация</a>
-                            <a class="nav-item" href="#">Гранты и кредиты</a>
-                            <a class="nav-item" href="#">Инфраструктура</a>
-                            <a class="nav-item" href="#">Патентование</a>
-                            <a class="nav-item" href="#">Проекты для мегаполиса</a>
-                            <a class="nav-item" href="#">О кластере</a>
-                            <a class="nav-item" href="#">Поддержка стартапов</a>
-                        </nav>
-                    </div>
-                    <div class="image-search">
-                        <img src="./images/search.svg" alt="search"/>
-                    </div>
+        </div>
+    
+        <div class="tm-width">
+            <div class="tm-menu mb-1">
+                <div class="tm-menu-container">
+                    <nav class="nav-list">
+                        <a class="nav-item" href="#">Инвестиции </a>
+                        <a class="nav-item" href="#">Спрос и кооперация</a>
+                        <a class="nav-item" href="#">Гранты и кредиты</a>
+                        <a class="nav-item" href="#">Инфраструктура</a>
+                        <a class="nav-item" href="#">Патентование</a>
+                        <a class="nav-item" href="#">Проекты для мегаполиса</a>
+                        <a class="nav-item" href="#">О кластере</a>
+                        <a class="nav-item" href="#">Поддержка стартапов</a>
+                    </nav>
+                </div>
+                <div class="image-search">
+                    <img src="./images/search.svg" alt="search"/>
                 </div>
             </div>
+        </div>
+    </header>
 
-        </header>
-
+    <div class="container">
         <main class="tm-main-container">
             <div class="tm-width">
                 <div class="info-frame mb-6">
@@ -84,22 +81,17 @@
                         <img src="./images/cluster_1.svg" alt=""/>
                     </div>
                     <div class="info-block">
-                        <div class="info-block-text">
-                            <h1>Отраслевые кластеры</h1>
-                            <div class="text">Помощник в поиске технологических партнеров и создании кооперации
-                                    Точка входа к государственным и корпоративным заказчикам</div>
-                        </div>
+                        <h1>Отраслевые кластеры</h1>
+                        <div class="text">Помощник в поиске технологических партнеров и создании кооперации
+                                Точка входа к государственным и корпоративным заказчикам</div>
                         <div class="div-block-btn">
-                            <a href="#" class="btn">технологическим компания</a>
-                            <a href="#" class="btn">заказчикам</a>
+                            <a href="#" class="btn-blue">технологическим компания</a>
+                            <a href="#" class="btn-blue">заказчикам</a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!--TODO: Заменить все длинные названия на короткие-->
-            <div class="tm-width">
-                <div class="cluster-cont-1 mb-6 pt-3">
+                <div class="cluster-cont-1 mb-6">
                     <div class="cluster-card">
                         <div class="cluster-card-text">
                             <div class="global-tag-line">ОБ ОТРАСЛЕВЫХ КЛАСТЕРАХ</div>
@@ -118,8 +110,8 @@
                     <div class="tm-about">
 
                         <div class="tm-about-frame">
-                            <div class="about-icon">
-                                <img src="./images/team.svg" alt=""/>
+                            <div class="icon">
+                                <img src="./images/icons/team.svg" alt=""/>
                             </div>
                             <div class="about-text">
                                 <div class="about-text-high">14 кластеров</div>
@@ -128,8 +120,8 @@
                         </div>
 
                         <div class="tm-about-frame">
-                            <div class="about-icon">
-                                <img src="./images/hand-coins.svg" alt=""/>
+                            <div class="icon">
+                                <img src="./images/icons/hand-coins.svg" alt=""/>
                             </div>
                             <div class="about-text">
                                 <div class="about-text-high">1200+</div>
@@ -138,8 +130,8 @@
                         </div>
 
                         <div class="tm-about-frame">
-                            <div class="about-icon">
-                                <img src="./images/promo.svg" alt=""/>
+                            <div class="icon">
+                                <img src="./images/icons/promo.svg" alt=""/>
                             </div>
                             <div class="about-text">
                                 <div class="about-text-high">140+</div>
@@ -148,8 +140,8 @@
                         </div>
 
                         <div class="tm-about-frame">
-                            <div class="about-icon">
-                                <img src="./images/case.svg" alt=""/>
+                            <div class="icon">
+                                <img src="./images/icons/case.svg" alt=""/>
                             </div>
                             <div class="about-text">
                                 <div class="about-text-high">640+ млрд ₽</div>
@@ -158,8 +150,8 @@
                         </div>
                         
                         <div class="tm-about-frame">
-                            <div class="about-icon">
-                                <img src="./images/company.svg" alt=""/>
+                            <div class="icon">
+                                <img src="./images/icons/company.svg" alt=""/>
                             </div>
                             <div class="about-text">
                                 <div class="about-text-high">28</div>
@@ -168,8 +160,8 @@
                         </div>
 
                         <div class="tm-about-frame">
-                            <div class="about-icon">
-                                <img src="./images/user_check.svg" alt=""/>
+                            <div class="icon">
+                                <img src="./images/icons/user_check.svg" alt=""/>
                             </div>
                             <div class="about-text">
                                 <div class="about-text-high">90</div>
@@ -178,9 +170,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="tm-width">
                 <div class="cluster-cont-2 mb-6">
                     <div class="text-decoration">
                         <div class="global-tag-line">Кластеры</div>
@@ -191,21 +181,19 @@
 
                         <div class="card-cluster">
                             <div class="illustration">
-                                <div class="img-cont">
-                                    <img src="./images/biofarmandMedTech.svg" alt="">
-                                </div>
+                                <img src="./images/biofarmandMedTech.svg" alt="">
                             </div>
                             <div class="cluster-info">
                                 <div class="info-text">Биофармацевтика<br> и медицинские технологии</div>
                                 <div class="info-project-ppl">
                                     <div class="info-project">
-                                        <h2>20+</h2>
-                                        <div class="ppl-text">проектов</div>
+                                        <div class="info-project-high">20+</div>
+                                        <div class="info-project-low">проектов</div>
                                     </div>
                                     <div class="slash"></div>
                                     <div class="info-project">
-                                        <h2>160+</h2>
-                                        <div class="ppl-text">участников</div>
+                                        <div class="info-project-high">160+</div>
+                                        <div class="info-project-low">участников</div>
                                     </div>
                                 </div>
                             </div>
@@ -213,21 +201,19 @@
 
                         <div class="card-cluster">
                             <div class="illustration">
-                                <div class="img-cont">
-                                    <img src="./images/cluster_assist_tech.svg" alt="">
-                                </div>
+                                <img src="./images/cluster_assist_tech.svg" alt="">
                             </div>
                             <div class="cluster-info">
                                 <div class="info-text">Биофармацевтика<br> и медицинские технологии</div>
                                 <div class="info-project-ppl">
                                     <div class="info-project">
-                                        <h2>15</h2>
-                                        <div class="ppl-text">проектов</div>
+                                        <div class="info-project-high">15</div>
+                                        <div class="info-project-low">проектов</div>
                                     </div>
                                     <div class="slash"></div>
                                     <div class="info-project">
-                                        <h2>100+</h2>
-                                        <div class="ppl-text">участников</div>
+                                        <div class="info-project-high">100+</div>
+                                        <div class="info-project-low">участников</div>
                                     </div>
                                 </div>
                             </div>
@@ -235,21 +221,19 @@
 
                         <div class="card-cluster">
                             <div class="illustration">
-                                <div class="img-cont">
-                                    <img src="./images/cluster_building_tech.svg" alt="">
-                                </div>
+                                <img src="./images/cluster_building_tech.svg" alt="">
                             </div>
                             <div class="cluster-info">
                                 <div class="info-text">Биофармацевтика<br> и медицинские технологии</div>
                                 <div class="info-project-ppl">
                                     <div class="info-project">
-                                        <h2>20</h2>
-                                        <div class="ppl-text">проектов</div>
+                                        <div class="info-project-high">20</div>
+                                        <div class="info-project-low">проектов</div>
                                     </div>
                                     <div class="slash"></div>
                                     <div class="info-project">
-                                        <h2>80+</h2>
-                                        <div class="ppl-text">участников</div>
+                                        <div class="info-project-high">80+</div>
+                                        <div class="info-project-low">участников</div>
                                     </div>
                                 </div>
                             </div>
@@ -257,21 +241,19 @@
 
                         <div class="card-cluster">
                             <div class="illustration">
-                                <div class="img-cont">
-                                    <img src="./images/green_msc.svg" alt="">
-                                </div>
+                                <img src="./images/green_msc.svg" alt="">
                             </div>
                             <div class="cluster-info">
                                 <div class="info-text">Биофармацевтика<br> и медицинские технологии</div>
                                 <div class="info-project-ppl">
                                     <div class="info-project">
-                                        <h2>11</h2>
-                                        <div class="ppl-text">проектов</div>
+                                        <div class="info-project-high">11</div>
+                                        <div class="info-project-low">проектов</div>
                                     </div>
                                     <div class="slash"></div>
                                     <div class="info-project">
-                                        <h2>195</h2>
-                                        <div class="ppl-text">участников</div>
+                                        <div class="info-project-high">195</div>
+                                        <div class="info-project-low">участников</div>
                                     </div>
                                 </div>
                             </div>
@@ -282,17 +264,151 @@
                         <a class="btn">Посмотреть все отрасли кластера</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="tm-width">
-                <div class="cluster-cont-3">
+                <div class="cluster-cont-3 mb-6">
+                    <div class="cluster-text">
+                        <div class="cluster-text-header">
+                            <div class="global-tag-line">ПРЕИМУЩЕСТВА</div>
+                            <div class="text-high">Отраслевые кластеры</div>
+                        </div>
+
+                        <div class="switch-block">
+                            <label for="toggle-btn" class="switch-block-text">для техкомпаний</label>
+                            <label class="switch">
+                                <input type="checkbox" id="toggle-btn"/>
+                                <span class="slider"></span>
+                            </label>
+                            <label for="toggle-btn" class="switch-block-text">для заказчиков</label>
+                        </div>
+
+                    </div>
+                    <div class="cluster-info2">
+                        <div class="cluster-info2-grid grid-card">
+                            <div class="grid-card-1" data-block="yes"> 
+                                <div class="icon">
+                                    <img src="./images/icons/cup.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text">
+                                    <div class="cluster-info2-text-high">Технологические конкурсы</div>
+                                    <div class="cluster-info2-text-low">участие в технологических конкурсах для разработки инновационных решений в интересах корпораций и города</div>
+                                </div>
+                                <div class="finance-img">
+                                    <img src="./images/finance_img.svg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="grid-card-2" data-block="yes">
+                                <div class="icon">
+                                    <img src="./images/icons/money.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text" data-block="yes">
+                                    <div class="cluster-info2-text-high">Поиск инвесторов</div>
+                                    <div class="cluster-info2-text-low">для развития 
+                                        вашего проекта или технологического решения</div>
+                                </div>
+                            </div>
+
+                            <div class="grid-card-3" data-block="yes">
+                                <div class="icon">
+                                    <img src="./images/icons/team.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text">
+                                    <div class="cluster-info2-text-high">Команда профессионалов</div>
+                                    <div class="cluster-info2-text-low">сопровождение развитие проекта отраслевым менеджером</div>
+                                </div>
+                            </div>
+
+                            <div class="grid-card-4" data-block="yes">
+                                <div class="icon">
+                                    <img src="./images//icons/press.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text">
+                                    <div class="cluster-info2-text-high">Обратная связь</div>
+                                    <div class="cluster-info2-text-low">по итогам отраслевой экспертизы для доработки проекта</div>
+                                </div>
+                                <div class="feedback-img">
+                                    <img src="./images/feedback_img.svg" alt="">
+                                </div>
+                            </div>
+            
+                            <div class="grid-card-5" data-block="yes">
+                                <div class="icon">
+                                    <img src="./images/icons/bulb_2.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text">
+                                    <div class="cluster-info2-text-high">Пилотное тестирование
+                                        <div class="popup-info">
+                                            <img src="./images/icons/info.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cluster-info2-text-low">участие на площадках бизнеса и города</div>
+                                </div>
+                            </div>
+
+                            <div class="grid-card-6" data-block="yes">
+                                <div class="icon">
+                                    <img src="./images/icons/hand.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text">
+                                    <div class="cluster-info2-text-high">Партнёры</div>
+                                    <div class="cluster-info2-text-low">Возможность найти технологического партнёра для кооперации</div>
+                                </div>
+                            </div>
+
+                            <div class="grid-card-7" data-block="yes">
+                                <div class="tower">
+                                    <img src="./images/towers.svg" alt="">
+                                </div>
+                                <div class="icon">
+                                    <img src="./images/icons/factory.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text">
+                                    <div class="cluster-info2-text-high">Подбор площадок</div>
+                                    <div class="cluster-info2-text-low">для локализации 
+                                        и масштабирования производства компании</div>
+                                </div>
+                            </div>
+
+                            <div class="grid-card-8" data-block="yes">
+                                <div class="icon">
+                                    <img src="./images/icons/promo.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text">
+                                    <div class="cluster-info2-text-high">Доступ к запросам</div>
+                                    <div class="cluster-info2-text-low">корпоративных и государственных заказчиков</div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid-card-9" data-block="yes">
+                                <div class="icon">
+                                    <img src="./images/icons/bulb_2.svg" alt="">
+                                </div>
+                                <div class="cluster-info2-text">
+                                    <div class="cluster-info2-text-high">Moscow R&D HUB</div>
+                                    <div class="cluster-info2-text-low">площадка, где заказчики и ведущие R&D-центры находят друг друга для решения исследовательских задач</div>
+                                </div>
+                                <div class="imsc-img">
+                                    <img src="./images/i_moscow.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cluster-cont-4">
+                    <div class="cluster-text-area">
+                        <div class="text-area">
+                            <div class="global-tag-line">УСЛОВИЯ</div>
+                            <div class="text-high">Разрабатываете инновационное решение или продукт?</div>
+                            <div class="text-description">Окажем поддержку в поиске комплектующих, разработке, кооперации и внедрении инновационных решений и продуктов!</div>
+                        </div>
+                        <div class="cluster-btn-area">
+                            <a class="btn-blue" href="">Найти заказчика</a>
+                            <a class="btn-blue" href="">Найти бизнес-партнера</a>
+                        </div>
+                    </div>
                     <div>
-                        <div class="global-tag-line">ПРЕИМУЩЕСТВА</div>
-                        <h2>Отраслевые кластеры</h2>
-                        <label class="switch">
-                            <input type="checkbox" class="switch-input">
-                            <span class="switch-slider"></span>
-                        </label>
+                        тут картинки
                     </div>
                 </div>
             </div>

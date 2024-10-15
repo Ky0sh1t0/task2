@@ -48,6 +48,12 @@ h1, h2, h3 {
     font-weight: 500;
 }
 
+.text-high {
+    font-size: 4.8rem;
+    font-weight: 500;
+}
+
+
 body {
     background: url('../images/backgorund.png') no-repeat;
     background-size: 100% 75rem;
@@ -55,6 +61,10 @@ body {
 
 .mb-1 {
     margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
 }
 
 .mb-6 {
@@ -71,6 +81,31 @@ body {
     white-space: nowrap;
 }
 
+.btn-blue {
+    display: inline-flex;
+    text-decoration: none;
+    padding: 16px 24px;
+    border: 1px solid rgba(19, 139, 225, 0.4);
+    border-radius: 12px;
+    color: rgba(19, 139, 225, 1);
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+    border: 1rem solid rgba(0, 153, 255, 0.18);
+    border-radius: 1rem;
+    margin-bottom: 2.4rem;
+    
+    img {
+        background-color: rgba(0, 153, 255, 0.18);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -78,8 +113,7 @@ body {
 }
 
 .underline {
-
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .tm-width {
@@ -100,6 +134,7 @@ body {
     
     .logo {
         height: 4rem;
+        margin-right: 2rem;
 
         img {
             height: 100%;
@@ -114,13 +149,7 @@ body {
         align-items: center;
         margin-left: auto;
         gap: 4rem;
-    
-        .cips {
-            display: flex;
-            align-items: center;
-            gap: 1.6rem;
-            max-height: 32px;
-        }
+
     }
 
     .auth {
@@ -128,14 +157,25 @@ body {
         gap: 1rem;
         align-items: center;
     
-        &:hover {
-            cursor: pointer;
-        }
+    }
+}
+
+.cips {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    max-height: 32px;
+
+    .btn {
+        padding: 0.8rem 1.2rem;
+        border: 1px solid rgba(255,255,255,0.5);
+        border-radius: 23px;
+        text-align: center;
+        line-height: 2rem;
     }
 }
 
 .tab {
-    margin-left: 2rem;
     display: flex;
     gap: 2rem;
     
@@ -185,10 +225,6 @@ body {
     text-align: center;
     line-height: 2rem;
 
-    &:hover {
-        cursor: pointer;
-    }
-
     .logo-white, .logo-telegram {
         width: 2rem;
         height: 2rem;
@@ -212,7 +248,7 @@ body {
 
 .tm-menu {
     display: flex;
-    margin: 1.6rem 0;
+    padding: 1.6rem 0;
 
     .image-search {
         margin-left: auto;
@@ -241,7 +277,7 @@ body {
 
 .info-frame {
     position: relative;
-    min-height: 600px;
+    min-height: 650px;
     background-color: white;
     border-radius: 6rem 6rem 0 0;
     padding: 6rem;
@@ -250,9 +286,9 @@ body {
     .cluster1-bg-img {
         position: absolute;
         left: -3.5rem;
-        top: 2.8rem;
+        bottom: 0rem;
         img {
-            object-fit: cover;
+            max-width: 100%;
         }
     }
 } 
@@ -262,34 +298,20 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    gap: 4rem;
     
-    &-text {
-        h1 {
-            font-size: 6.4rem;
-            margin-bottom: 1.6rem;
-        }      
-        
-        .text {
-            font-size: 1.6rem;
-        }
+    h1 {
+        font-size: 6.4rem;
+        margin-bottom: 1.6rem;
+    }      
+    
+    .text {
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
     }
 
     .div-block-btn {
-        display: inline-flex;
-        flex-wrap: nowrap;
+        display: flex;
         gap: 12px;
-        
-        .btn {
-            padding: 16px 24px;
-            border: 1px solid rgba(19, 139, 225, 0.4);
-            border-radius: 12px;
-            color: rgba(19, 139, 225, 1);
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
     }
 
 }
@@ -306,13 +328,12 @@ body {
 .cluster-card {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    min-height: 400px;
-    min-width: calc(40% - 4rem);
     border: 1px solid rgba(19, 139, 225, 0.2);
     border-radius: 3.2rem;
     padding: 3.2rem;
-    background: url("../images/Vector_block.png");
+    background: linear-gradient(to top, 
+                rgba(19, 139, 225, 0.2), 
+                rgba(19, 139, 225, 0.04));
     background-size: cover;
    
     &-text {
@@ -339,8 +360,6 @@ body {
         max-height: 270px;
         margin: 0 auto;
         img {
-            height: 100%;
-            width: 100%;
             object-fit: cover;
         }
     }
@@ -350,7 +369,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
-    padding: 2.4rem 0;
+    padding: 2.4rem 0 0 0;
 
     &-frame {
         display: flex;
@@ -374,21 +393,6 @@ body {
                 font-size: 1.6rem;
                 color: rgba(28, 29, 34, 0.36)
             }
-        }
-    }
-
-    .about-icon {
-        height: 24px;
-        width: 24px;
-        border: 1rem solid rgba(0, 153, 255, 0.18);
-        border-radius: 1rem;
-        margin-bottom: 2.4rem;
-        
-        img {
-            background-color: rgba(0, 153, 255, 0.18);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
     }
 }
@@ -425,7 +429,7 @@ body {
     border-radius: 2rem;
     padding: 1.2rem 0.8rem 2.4rem;
     align-items: center;
-    flex: 1 1;
+    flex: 1;
     box-shadow:
         0px -4px 8px 0px rgba(68, 83, 113, 0.05),
         0px 0px 16px 0px rgba(68, 83, 113, 0.1);
@@ -436,25 +440,20 @@ body {
         border-radius: 2rem;
         background-color: rgb(248,248,248);
         width: 100%;
-        min-height: 200px;
+        min-height: 250px;
         margin-bottom: 2rem;
 
-        .img-cont {
-            max-width: fit-content;
+        img {
             margin: 0 auto;
-            img {
-                object-fit: cover;
-            }
+            object-fit: cover;
         }
     }
 }
 
 .cluster-info {
-    min-width: calc((100% / 4) - (2rem * 3));
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-    padding: 0 2rem;
 
     .info-text {
         font-size: 1.8rem;
@@ -473,13 +472,15 @@ body {
         }
 
         .info-project {
-            h2 {
+
+            &-high {
                 font-size: 2.4rem;
+                font-weight: 500;
                 color: rgb(19, 139, 225);
             }
 
 
-            .ppl-text {
+            &-text {
                 font-size: 1.6rem;
             }
         }
@@ -504,4 +505,217 @@ body {
 .cluster-cont-3 {
     display: flex;
     flex-direction: column;
+    gap: 4rem;
+
+    .cluster-text {
+        margin: 0 auto;
+        &-header{
+            margin-bottom: 2rem;
+            text-align: center;
+            
+            .global-tag-line {
+                display: inline-flex;
+            }
+        }
+    }
+}
+
+// switch
+
+.switch-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    &-text {
+        color: rgba(19,138,225, 1);
+        font-size: 3.2rem;
+        font-weight: 500;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: 26px;
+            }
+        }
+
+        .slider {
+            border-radius: 34px;
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(232, 237, 242, 1);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: rgba(19, 139, 225, 1);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+}
+
+
+.cluster-info2 {
+    position: relative;
+    &-text {
+        max-width: 270px;
+
+        &-high {
+            display: inline-flex;
+            text-wrap: nowrap;
+            gap: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        &-low {
+            font-size: 1.6rem;
+        }
+    }
+
+    &-image {
+        max-width: fit-content;
+    }
+
+    &-grid {
+        display: grid;
+        grid-area: grid1;
+        grid-template-areas: 
+        "techcon invest test partner" 
+        "techcon profTeam place mscHub"
+        "feedback feedback req mscHub";
+        gap: 2rem;
+    }
+    
+    .grid-card {
+        
+        & > *[data-block=yes] {
+            box-shadow:
+            0px -4px 8px 0px rgba(68, 83, 113, 0.05),
+            0px 0px 16px 0px rgba(68, 83, 113, 0.1);
+            border-radius: 2rem;
+            padding: 2.4rem 2.4rem;
+        }
+
+        .finance-img {
+            position: relative;
+            img {
+                position: absolute;
+                top: 3rem;
+                right: 3rem;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .feedback-img {
+            position: relative;
+            img {
+                position: absolute;
+                right: 0;
+                bottom: -6rem;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .tower {
+            position: relative;
+            img {
+                position: absolute;
+                bottom: -5rem;
+                right: -3rem;
+                max-width: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        .imsc-img {
+            position: relative;
+            
+            img {
+                max-width: 100%;
+                position: absolute;
+                top: 0;
+                object-fit: cover;
+            }
+        }
+
+    
+        &-1 {
+            grid-area: techcon;
+        }
+    
+        &-2 {
+            grid-area: invest;
+        }
+    
+        &-3 {
+            grid-area: profTeam;
+        }
+    
+        &-4 {
+            grid-area: feedback;
+        }
+    
+        &-5 {
+            grid-area: test;
+        }
+    
+        &-6 {
+            grid-area: partner;
+        }
+    
+        &-7 {
+            grid-area: place;
+        }
+    
+        &-8 {
+            grid-area: req;
+        }
+    
+        &-9 {
+            grid-area: mscHub;
+        }
+    }
+}
+
+
+.cluster-cont-4 {
+    display: flex;
+    flex-direction: column;
+
+    .cluster-text-area {
+        margin: 0 auto;
+        .text-area {
+            text-align: center;
+        }
+    }
 }
