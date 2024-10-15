@@ -81,39 +81,39 @@ body {
   margin: 0 auto;
 }
 
-.tm-header-cntr-1 {
+.tm-header-cont-1 {
   align-items: center;
   box-sizing: border-box;
   display: flex;
   color: white;
 }
-.tm-header-cntr-1 .logo {
+.tm-header-cont-1 .logo {
   height: 4rem;
 }
-.tm-header-cntr-1 .logo img {
+.tm-header-cont-1 .logo img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.tm-header-cntr-1 .profile {
+.tm-header-cont-1 .profile {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-left: auto;
   gap: 4rem;
 }
-.tm-header-cntr-1 .profile .cips {
+.tm-header-cont-1 .profile .cips {
   display: flex;
   align-items: center;
   gap: 1.6rem;
   max-height: 32px;
 }
-.tm-header-cntr-1 .auth {
+.tm-header-cont-1 .auth {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-.tm-header-cntr-1 .auth:hover {
+.tm-header-cont-1 .auth:hover {
   cursor: pointer;
 }
 
@@ -246,7 +246,7 @@ body {
   cursor: pointer;
 }
 
-.tm-about-cluster-container {
+.cluster-cont-1 {
   display: flex;
   flex-direction: row;
   gap: 4rem;
@@ -334,20 +334,20 @@ body {
   object-fit: cover;
 }
 
-.div-tm-project-container {
+.cluster-cont-2 {
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
-.div-tm-project-container .text-decoration {
+.cluster-cont-2 .text-decoration {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
 }
-.div-tm-project-container .text-decoration .global-tag-line {
+.cluster-cont-2 .text-decoration .global-tag-line {
   font-size: 1.4rem;
 }
-.div-tm-project-container .text-decoration h2 {
+.cluster-cont-2 .text-decoration h2 {
   font-size: 4.8rem;
 }
 
@@ -412,13 +412,18 @@ body {
 }
 
 .cluster-btn {
-  align-self: center;
+  margin: 0 auto;
   border-radius: 1.2rem;
   padding: 1.2rem 2.4rem;
   background: linear-gradient(to right, rgb(55, 203, 250), rgb(34, 157, 245));
 }
 .cluster-btn:hover {
   cursor: pointer;
+}
+
+.cluster-cont-3 {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
