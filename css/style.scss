@@ -1,5 +1,11 @@
 //sass --watch css/style.scss:css/style.css
 
+// variables
+$tablet: 991px;
+$phone: 767px;
+
+
+// styles
 @font-face {
     font-family: 'TTSFirsNeue';
     src: url("../fonts/TTFirsNeue-Regular.woff2") format("woff2");
@@ -88,6 +94,8 @@ body {
     border: 1px solid rgba(19, 139, 225, 0.4);
     border-radius: 12px;
     color: rgba(19, 139, 225, 1);
+    font-weight: 500;
+    font-size: 1.6rem;
 }
 
 .icon {
@@ -107,8 +115,6 @@ body {
 
 
 .container {
-    display: flex;
-    flex-direction: column;
     min-height: 100%;
 }
 
@@ -117,10 +123,24 @@ body {
 }
 
 .tm-width {
-    max-width: 1400px;
-    padding: 0 5rem;
+    max-width: 1240px;
+    padding: 0 10rem;
     min-width: 320px;
     margin: 0 auto;
+
+
+    @media (max-width: $tablet) {
+        max-width: 900px;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex:1;
+    }
+
+    @media (max-width: $phone) {
+        max-width: $phone;
+        padding: 0 0.5rem;
+    }
 }
 
 
@@ -143,6 +163,46 @@ body {
         }
     }
 
+    
+    .tab {
+        display: flex;
+        gap: 2rem;
+
+        input[type=radio] {
+            display: none;
+            
+            &:checked + label {
+                position: relative;
+                font-weight: 500;
+                color: rgba(255,255,255, 1);
+                
+                &::before {
+                    content: "___";
+                    position:absolute;
+                    bottom: -3px;
+                    left: 50%;
+                }
+            }
+            
+        }
+        
+        label {
+            padding: 2.7rem 0;
+            line-height: 2rem;
+            color: rgba(255,255,255, 0.8);
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .br {
+            background-color:rgba(255,255,255,0.2);
+            width: 1px;
+            height: 1.2rem;
+            align-self: center;
+        }
+    }
+    
     .profile {
         display: flex;
         flex-direction: row;
@@ -150,70 +210,73 @@ body {
         margin-left: auto;
         gap: 4rem;
 
-    }
-
-    .auth {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    
-    }
-}
-
-.cips {
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-    max-height: 32px;
-
-    .btn {
-        padding: 0.8rem 1.2rem;
-        border: 1px solid rgba(255,255,255,0.5);
-        border-radius: 23px;
-        text-align: center;
-        line-height: 2rem;
-    }
-}
-
-.tab {
-    display: flex;
-    gap: 2rem;
-    
-    input[type=radio] {
-        display: none;
+        .cips {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
         
-        &:checked + label {
-            position: relative;
-            font-weight: 500;
-            color: rgba(255,255,255, 1);
+            .btn {
+                padding: 0.8rem 1.2rem;
+                border: 1px solid rgba(255,255,255,0.5);
+                border-radius: 23px;
+                text-align: center;
+                line-height: 2rem;
+            }
+        }
+        .auth {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
             
-            &::before {
-                content: "___";
-                position:absolute;
-                bottom: -3px;
-                left: 50%;
+        }
+    }
+
+
+    @media (max-width: $tablet) {
+
+        .logo {
+            height: 3rem;
+            margin-right: 0.6rem;
+        }
+
+        .tab {
+            gap: 1rem;
+
+            label {
+                padding: 2.7rem 0 2.3rem 0;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
             }
         }
 
-    }
+        .profile {
+            gap: 1.6rem;
 
-    label {
-        padding: 2.7rem 0;
-        line-height: 2rem;
-        color: rgba(255,255,255, 0.8);
+            .cips {
+                gap: 0.8rem;
+                
+                .btn {
+                    padding: 0.6rem 1.2rem;
+                    font-size: 1.2rem;
+                }
+            }
 
-        &:hover {
-            cursor: pointer;
+            .auth {
+                &-text {
+                    display: none;
+                }
+            }
         }
     }
 
-    .br {
-        background-color:rgba(255,255,255,0.2);
-        width: 1px;
-        height: 1.2rem;
-        align-self: center;
+    @media (max-width: $phone) {
+
     }
+
 }
+
+
+
 
 .chips-btn {
     display: flex;
@@ -241,6 +304,10 @@ body {
         text-align: center;
         font-size: 1.2rem;
     }
+
+    @media (max-width: $phone) {
+        display: none;
+    }
 }
 
 
@@ -259,7 +326,7 @@ body {
         }
     }
 
-    .tm-menu-container {
+    &-laptop {
         display: flex;
         align-items: center;
     
@@ -268,6 +335,31 @@ body {
             margin-right: 2.4rem;
             box-sizing: border-box;
         }
+    }
+
+    &-tablet {
+        display: none;
+    }
+
+    &-phone {
+        display: none;
+    }
+
+    @media (max-width: $tablet) {
+
+        &-laptop {
+            display: none;
+        }
+
+        &-tablet {
+            display: flex;
+            align-items: center;
+
+            .nav-item {
+                margin-right: 2rem;
+            }
+        }
+
     }
 }
 
@@ -281,48 +373,88 @@ body {
     background-color: white;
     border-radius: 6rem 6rem 0 0;
     padding: 6rem;
-    flex: 1;
     
     .cluster1-bg-img {
-        position: absolute;
-        left: -3.5rem;
-        bottom: 0rem;
-        img {
+        .laptop {
+            position: absolute;
+            left: -3.5rem;
+            bottom: 2.8rem;
             max-width: 100%;
+        }
+
+        .tablet {
+            display: none;
+        }
+
+
+    }
+
+    .info-block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 570px;
+        
+        h1 {
+            font-size: 6.4rem;
+            margin-bottom: 1.6rem;
+        }      
+        
+        .text {
+            font-size: 1.6rem;
+            margin-bottom: 4rem;
+        }
+    
+        .div-block-btn {
+            display: flex;
+            gap: 12px;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        position: unset;
+        min-height: 500px;
+        padding: 3.2rem;
+        border-radius: 2.4rem 2.4rem 0 0;
+
+        .cluster1-bg-img {
+            .laptop {
+                display: none;
+            }
+            .tablet {
+            }
+        }
+
+        .info-block {
+            max-width: 350px;
+
+            h1 {
+                font-size: 3.6rem;
+            }
+
+            .div-block-btn {
+                flex-direction: column;
+                max-width: 300px;
+
+                .btn-blue {
+                    display: unset;
+                    text-align: center;
+                }
+            }
         }
     }
 } 
 
-.info-block {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    
-    h1 {
-        font-size: 6.4rem;
-        margin-bottom: 1.6rem;
-    }      
-    
-    .text {
-        font-size: 1.6rem;
-        margin-bottom: 4rem;
-    }
-
-    .div-block-btn {
-        display: flex;
-        gap: 12px;
-    }
-
-}
 
 
 
 
 .cluster-cont-1 {
     display: flex;
-    flex-direction: row;
     gap: 4rem;
+
+    @media (max-width: $tablet) {
+    }
 }
 
 .cluster-card {
@@ -337,7 +469,6 @@ body {
     background-size: cover;
    
     &-text {
-        max-width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
@@ -397,11 +528,15 @@ body {
     }
 }
 
-
+// TODO: Тут проблема с адаптивом
 .cluster-cont-2 {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
 
     .text-decoration {
         display: flex;
@@ -424,51 +559,43 @@ body {
 }
 
 .card-cluster {
-    display: flex;
-    flex-direction: column;
     border-radius: 2rem;
     padding: 1.2rem 0.8rem 2.4rem;
-    align-items: center;
     flex: 1;
     box-shadow:
         0px -4px 8px 0px rgba(68, 83, 113, 0.05),
         0px 0px 16px 0px rgba(68, 83, 113, 0.1);
     
     .illustration {
-        display: inline-flex;
-        align-items: center;
+        display: flex;
         border-radius: 2rem;
         background-color: rgb(248,248,248);
-        width: 100%;
         min-height: 250px;
         margin-bottom: 2rem;
 
         img {
             margin: 0 auto;
-            object-fit: cover;
         }
     }
 }
 
 .cluster-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
+    padding: 0 2rem;
 
     .info-text {
         font-size: 1.8rem;
         font-weight: 500;
+        margin-bottom: 2.4rem;
     }
 
     .info-project-ppl {
         display: flex;
-        gap: 4rem;
-    
+        flex-direction: row;
+        justify-content: space-between;
+
         .slash {
             background-color:rgba(28,29,34, 12%);
             width: 1px;
-            height: 100%;
-            align-self: center;    
         }
 
         .info-project {
@@ -480,8 +607,9 @@ body {
             }
 
 
-            &-text {
+            &-low {
                 font-size: 1.6rem;
+                font-weight: 500;
             }
         }
     }
@@ -502,10 +630,16 @@ body {
 }
 
 
+// TODO: тут проблема из-за которой не работает правильно адаптив
 .cluster-cont-3 {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
+
 
     .cluster-text {
         margin: 0 auto;
@@ -580,14 +714,16 @@ body {
 }
 
 
-.cluster-info2 {
-    position: relative;
+.cluster-info-grid {
+    display: grid;
+        grid-template-areas: 
+        "techcon invest test partner" 
+        "techcon profTeam place mscHub"
+        "feedback feedback req mscHub";
+        gap: 2rem;
     &-text {
-        max-width: 270px;
-
+        
         &-high {
-            display: inline-flex;
-            text-wrap: nowrap;
             gap: 0.8rem;
             font-size: 1.8rem;
             font-weight: 500;
@@ -599,111 +735,94 @@ body {
         }
     }
 
-    &-image {
-        max-width: fit-content;
+   
+}
+.grid-card {
+    
+    & > *[data-block=yes] {
+        box-shadow:
+        0px -4px 8px 0px rgba(68, 83, 113, 0.05),
+        0px 0px 16px 0px rgba(68, 83, 113, 0.1);
+        border-radius: 2rem;
+        padding: 2.4rem 2.4rem;
     }
 
-    &-grid {
-        display: grid;
-        grid-area: grid1;
-        grid-template-areas: 
-        "techcon invest test partner" 
-        "techcon profTeam place mscHub"
-        "feedback feedback req mscHub";
-        gap: 2rem;
+    .finance-img {
+        position: absolute;
+        bottom: -3rem;
+        right: 5rem;
+        img {
+            max-width: 100%;
+        }
     }
-    
-    .grid-card {
+
+    .feedback-img {
+        position: absolute;
+        right: 0;
+        top: -2rem;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .tower {
+        position: absolute;
+        top: -4rem;
+        right: -3rem;
+        img {
+            max-width: 100%;
+        }
+
+    }
+
+    .imsc-img {
+        position: absolute;
+        bottom: 0;
         
-        & > *[data-block=yes] {
-            box-shadow:
-            0px -4px 8px 0px rgba(68, 83, 113, 0.05),
-            0px 0px 16px 0px rgba(68, 83, 113, 0.1);
-            border-radius: 2rem;
-            padding: 2.4rem 2.4rem;
+        img {
+            max-width: 100%;
         }
+    }
 
-        .finance-img {
-            position: relative;
-            img {
-                position: absolute;
-                top: 3rem;
-                right: 3rem;
-                max-width: 100%;
-                object-fit: cover;
-            }
-        }
 
-        .feedback-img {
-            position: relative;
-            img {
-                position: absolute;
-                right: 0;
-                bottom: -6rem;
-                max-width: 100%;
-                object-fit: cover;
-            }
-        }
+    &-1 {
+        grid-area: techcon;
+        position: relative;
+    }
 
-        .tower {
-            position: relative;
-            img {
-                position: absolute;
-                bottom: -5rem;
-                right: -3rem;
-                max-width: 100%;
-                object-fit: cover;
-            }
+    &-2 {
+        grid-area: invest;
+    }
 
-        }
+    &-3 {
+        grid-area: profTeam;
+    }
 
-        .imsc-img {
-            position: relative;
-            
-            img {
-                max-width: 100%;
-                position: absolute;
-                top: 0;
-                object-fit: cover;
-            }
-        }
+    &-4 {
+        grid-area: feedback;
+        position: relative;
+    }
 
-    
-        &-1 {
-            grid-area: techcon;
-        }
-    
-        &-2 {
-            grid-area: invest;
-        }
-    
-        &-3 {
-            grid-area: profTeam;
-        }
-    
-        &-4 {
-            grid-area: feedback;
-        }
-    
-        &-5 {
-            grid-area: test;
-        }
-    
-        &-6 {
-            grid-area: partner;
-        }
-    
-        &-7 {
-            grid-area: place;
-        }
-    
-        &-8 {
-            grid-area: req;
-        }
-    
-        &-9 {
-            grid-area: mscHub;
-        }
+    &-5 {
+        grid-area: test;
+    }
+
+    &-6 {
+        grid-area: partner;
+    }
+
+    &-7 {
+        grid-area: place;
+        position: relative;
+    }
+
+    &-8 {
+        grid-area: req;
+    }
+
+    &-9 {
+        grid-area: mscHub;
+        position: relative;
     }
 }
 
@@ -711,6 +830,12 @@ body {
 .cluster-cont-4 {
     display: flex;
     flex-direction: column;
+    display: none;
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
+
 
     .cluster-text-area {
         margin: 0 auto;
